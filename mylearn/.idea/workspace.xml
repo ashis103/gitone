@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf77f70b-931d-4c07-80c7-ce921101a015" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/errors_found.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/find error.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fout.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CICD_AWS/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +17,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2qqmZCXEzieiq0Xjcirko0XV1X0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,8 +34,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Python.find error.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "devlopment"
   }
 }]]></component>
