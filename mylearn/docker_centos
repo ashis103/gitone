@@ -1,0 +1,112 @@
+
+Docker is a computer program that performs operating-system-level virtualization. It was first released in 2013 and is developed by Docker, 
+Inc. Docker is used to run software packages called containers.Docker is an application that makes it simple and easy to run application processes in a container, 
+which are like virtual machines, only more portable, more resource-friendly, and more dependent on the host operating system
+
+Link: https://linuxize.com/post/how-to-install-and-use-docker-on-centos-7/
+Link: https://www.tecmint.com/install-docker-and-learn-containers-in-centos-rhel-7-6/
+
+Need to create a user id in bellow link
+
+https://hub.docker.com/
+
+mail: ashis103@gmail.com
+uname: ashis103
+passwd:
+
+# yum install docker
+# yum install epel-release
+# yum install docker-io
+# systemctl start docker 
+# systemctl status docker
+# systemctl enable docker
+# service docker start
+# service docker status
+# chkconfig docker on
+# docker run hello-world
+# docker info
+# docker version
+# docker images
+
+How to check docker running or not
+# systemctl status docker
+
+how much container running
+
+#docker ps -a
+
+How to run a apache in a container
+
+# docker run -dit --name ashis-web -p 8088:80 -v /home/user/website/:/usr/local/apache2/htdocs/ httpd:2.4
+
+Create a webpage on the file before run put the image int docker apavhe directory 
+
+vim /home/user/website/docker.html
+
+</h1>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Welcome to Learning Website</h2>
+<p>Enjoy with Docker:</p>
+
+<img src="ashis.jpg" alt="ashisweb.com" width="143" height="142">
+
+</body>
+</html>
+
+
+NOw 
+
+we want to run ubuntu in a centos container 
+
+#sudo docker pull ubuntu
+
+#sudo docker run -it ubuntu
+
+#cat /etc/issue
+
+HOw to remove a container from docker
+
+# docker rm fervent_thompson [docker name]
+
+HOw to run a mysql into docker container
+
+1. Start docker quick terminal
+2. docker run --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql/mysql-server:latest
+3. docker exec -it mysql bash
+4. mysql -uroot -p
+5. create database hero;
+6. show databases;
+6. GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password';
+7. exit;
+8. mkdir /Users/abhi/host
+9. docker run -it -v /host:/shared mysql/mysql-server:latest
+
+How to login with a container into docker
+
+# docker attach 50488cce6879 [container id]
+
+HOw to start a container
+
+# docker start f1f6246768c5
+
+How to add amysql db into docker with phy container
+
+docker pull mysql
+docker run --name=testsql -e MYSQL_ROOT_PASSWORD=rukshani -d mysql
+docker ps -a
+docker inspect testsql
+docker pull phpmyadmin/phpmyadmin
+docker run --name myadmin -d --link testsql:db -p 8080:80 phpmyadmin/phpmyadmin
+docker ps -a
+
+HOw to reset root password in mysql
+
+SET PASSWORD FOR 'root' = PASSWORD('root@123');
+or
+update user set authentication_string=password('root@123d') where user='root';
+or
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root@123';
+
